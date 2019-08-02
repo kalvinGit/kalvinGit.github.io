@@ -289,9 +289,108 @@
         
           
         
+          
+        
       
     
     
+      
+        
+          <div class='post-wrapper'>
+            <article class="post reveal ">
+  
+
+
+  <section class='meta'>
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  <h2 class="title">
+    <a href="/2019/08/02/kpopup/">
+      基于jQuery的轻量级滑出层插件
+    </a>
+  </h2>
+
+
+      
+      <div class='new-meta-box'>
+        
+          
+        
+          
+            
+  <div class='new-meta-item author'>
+    <a href="http://yoursite.com" rel="nofollow">
+      
+        <i class="fas fa-user" aria-hidden="true"></i>
+      
+      <p>Kalvin</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2019-08-02</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <h1 id="kpopup插件"><a href="#kpopup插件" class="headerlink" title="kpopup插件"></a>kpopup插件</h1><p>基于jQuery的轻量级滑出层插件，100来行代码，功能强大，无需依赖任何Css文件，拿来即用，效果出众。</p>
+<h1 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明"></a>使用说明</h1><h2 id="引入js"><a href="#引入js" class="headerlink" title="引入js"></a>引入js</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"js/kpopup.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+<h2 id="放置html容器"><a href="#放置html容器" class="headerlink" title="放置html容器"></a>放置html容器</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 滑出层核心容器 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"rightPopup"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 滑出层里面的内容块 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"content"</span> <span class="attr">style</span>=<span class="string">"display: none;"</span>&gt;</span></span><br><span class="line">    我是滑出块内容。。<span class="tag">&lt;/<span class="name">br</span>&gt;</span></span><br><span class="line">    我是滑出块内容。。<span class="tag">&lt;/<span class="name">br</span>&gt;</span></span><br><span class="line">    我是滑出块内容。。<span class="tag">&lt;/<span class="name">br</span>&gt;</span></span><br><span class="line">    重要事，说三遍。。。</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="实例化滑出层"><a href="#实例化滑出层" class="headerlink" title="实例化滑出层"></a>实例化滑出层</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 右滑出层</span></span><br><span class="line"><span class="keyword">new</span> popup(<span class="string">'#rightPopup'</span>, <span class="string">'#rightBtn'</span>, &#123;</span><br><span class="line">    <span class="comment">// width: '334px',    // 滑出层宽度</span></span><br><span class="line">    <span class="comment">// height: '170px',    // 滑出层调度</span></span><br><span class="line">    content: $(<span class="string">'#content'</span>),    <span class="comment">// 主要内容；可以为html，可以为dom对象</span></span><br><span class="line">    duration: <span class="number">500</span>    <span class="comment">// 滑出速度，默认fast</span></span><br><span class="line">&#125;).popupRight();    <span class="comment">// 可以调用setTop,setRight等方法对滑出层位置进行调整</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h2><p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9naXRlZS5jb20va2FsdmlubXkva3BvcHVwL3Jhdy9tYXN0ZXIvaW1nL0dJRi5naWY" alt="滑出效果"></p>
+<ul>
+<li>gitee：<a href="https://gitee.com/kalvinmy/kpopup.git" target="_blank" rel="noopener">https://gitee.com/kalvinmy/kpopup.git</a></li>
+<li>github：<a href="https://github.com/kalvinGit/kpopup.git" target="_blank" rel="noopener">https://github.com/kalvinGit/kpopup.git</a></li>
+<li>Kalvin在线工具：<a href="https://tools.kalvinbg.cn" target="_blank" rel="noopener">https://tools.kalvinbg.cn</a></li>
+</ul>
+
+      
+    </div>
+    
+  </section>
+</article>
+
+          </div>
+        
       
         
           <div class='post-wrapper'>
